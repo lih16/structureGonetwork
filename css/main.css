@@ -1,0 +1,62 @@
+@CHARSET "UTF-8";
+
+body {
+    background-color: #f0f0f0;
+}
+
+#wrapper {
+    margin: 30px auto;
+    width: 500px;
+}
+
+#email {
+    width: 348px;
+}
+
+#text {
+    width: 348px;
+    height: 70px;
+}
+
+#waiting {
+    color: #767676;
+    text-align: center;
+}
+
+fieldset {
+    margin-top: 10px;
+    background: #fff;
+    border: 1px solid #c8c8c8;
+    background-color: #fff;
+}
+
+legend {
+    background-color: #fff;
+    border-top: 1px solid #c8c8c8;
+    border-right: 1px solid #c8c8c8;
+    border-left: 1px solid #c8c8c8;
+    font-size: 1.0em;
+    padding: 0px 7px;
+}
+
+label {
+    display: inline-block;
+    width: 150px;
+}
+
+.success {
+    width: 398px;
+    background: #ffffff;
+    border: #337f09 1px solid;
+    padding: 5px;
+}
+
+.error {
+    width: 490px;
+    background: #ffffff;
+    border: #c8c8c8 1px solid;
+    padding: 5px;
+}
+.right-area{ width:244px; border:solid 1px #cbcbcc; background:#ffffff repeat-y left top; float:right; padding:11px 10px 10px 10px;}
+.section-left table{ margin-bottom:20px;}
+.section-right{ float:right; padding-top:18px;}

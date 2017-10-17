@@ -1,0 +1,76 @@
+34024c34024
+<           springLength: 95,
+---
+>           springLength: 10,
+34034c34034
+<           springLength: 100,
+---
+>           springLength: 10,
+34040c34040
+<           springLength: 200,
+---
+>           springLength: 20,
+36294c36294
+<         if (Object.keys(childNodesObj).length < 2) {
+---
+>         if (Object.keys(childNodesObj).length < 1) {
+36475c36475
+< 
+---
+>         var myphysics=0;
+36491a36492
+> 		
+36493c36494,36496
+<           var positions = {};
+---
+>          
+> 		  myphysics=1;
+>   		  var positions = {};
+36539c36542,36545
+<             containedNode.setOptions({ hidden: false, physics: false });
+---
+> 			if(myphysics==1)
+> 				containedNode.setOptions({ hidden: false, physics: false });
+> 		    else
+> 				containedNode.setOptions({ hidden: false, physics: true });
+36583c36589,36592
+<               util.deepExtend(clonedOptions, { from: fromId, to: toId, hidden: false, physics: true, id: id });
+---
+> 			  if(myphysics==1)
+>               util.deepExtend(clonedOptions, { from: fromId, to: toId, hidden: false, physics: false, id: id });
+> 		      else
+> 				  util.deepExtend(clonedOptions, { from: fromId, to: toId, hidden: false, physics: true, id: id });
+38483,38491c38492,38496
+< 			if (this.options.dragGO === true){
+< 				
+< 				var diffX = pointer.x - this.drag.pointer.x;
+< 				var diffY = pointer.y - this.drag.pointer.y;
+< 
+< 				this.body.view.translation = { x: this.drag.translation.x + diffX, y: this.drag.translation.y + diffY };
+< 				this.body.emitter.emit('_redraw');
+< 			}
+< 			
+---
+>             var diffX = pointer.x - this.drag.pointer.x;
+>             var diffY = pointer.y - this.drag.pointer.y;
+> 
+>             this.body.view.translation = { x: this.drag.translation.x + diffX, y: this.drag.translation.y + diffY };
+>             this.body.emitter.emit('_redraw');
+40266c40271
+<             var clusterThreshold = 100;
+---
+>             var clusterThreshold = 500;
+42802d42806
+< 	  dragGO:{boolean:boolean},
+43169c43173
+<         springLength: [95, 0, 500, 5],
+---
+>         springLength: [10, 0, 50, 5],
+43178c43182
+<         springLength: [95, 0, 500, 5],
+---
+>         springLength: [10, 0, 50, 5],
+43185c43189
+<         springLength: [200, 0, 500, 5],
+---
+>         springLength: [20, 0, 50, 5],
